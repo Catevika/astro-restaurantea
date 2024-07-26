@@ -1,0 +1,11 @@
+---
+const { title, paragraph } = Astro.props;
+---
+
+<div class="container__card__details">
+  <slot />
+  <div class="column col__h__start">
+    <h5>{title}</h5>
+    <p>{paragraph}</p>
+  </div>
+</div>;

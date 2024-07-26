@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets";
+import cart from "../../assets/icons/cart.svg";
+import logo from "../../assets/icons/logo.svg";
+import Icon from "../Icons/Icon.astro";
+import Navbar from "./Navbar.astro";
+---
+
+<header>
+  <div class="header__container">
+    <p class="header__phoneNumber">Call - 987 654 321</p>
+    <Image src={logo} alt="Restaurantea logo" loading="eager" />
+    <p>
+      <a class="header__link" href="/cart" role="button">
+        <Icon iconClass="icon" src={cart} alt="Cart icon" loading="eager" />
+        <a class="header__link reverseButton" href="/order" role="button"
+          >Order for Delivery</a
+        >
+      </a>
+    </p>
+  </div>
+  <div class="borders-gray">
+    <Navbar />
+  </div>
+</header>
+
+<style>
+  .header__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  @media (max-width: 590px) {
+    .header__container {
+      justify-content: center;
+    }
+  }
+
+  .header__link {
+    vertical-align: middle;
+  }
+</style>

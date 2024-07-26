@@ -1,0 +1,29 @@
+---
+import { details } from "../../data";
+import IconCardDetails from "../Cards/IconCardDetails.astro";
+import Icon from "../Icons/Icon.astro";
+---
+
+<div class="container__cards container__details">
+  {
+    details
+      ? details.map((detail) => {
+          <>
+            <Icon
+              iconClass="dotted__line icon__large"
+              src={detail.icon}
+              alt={detail.alt}
+              width={detail.width}
+              height={detail.height}
+              loading="eager"
+            />
+            <IconCardDetails
+              key={detail.id}
+              title={detail.title}
+              paragraph={detail.paragraph}
+            />
+          </>;
+        })
+      : null
+  }
+</div>

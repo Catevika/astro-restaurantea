@@ -1,0 +1,46 @@
+---
+import Button from "../Buttons/Button.astro";
+---
+
+<div class="mailingListBlock__container">
+  <h6 class="text-uppercase borders-gold">Mailing List</h6>
+  <h4>Join our mailing list</h4>
+  <p>Get updates on events & exclusive offers.</p>
+  <form class="form__container">
+    <label for="email-mailing">Email</label>
+    <input
+      type="email"
+      id="email-mailing"
+      placeholder="Email"
+      name="email"
+      title="Email"
+      autocomplete="email"
+    />
+    <Button text="Subscribe Now!" />
+  </form>
+</div>
+
+<style>
+  .mailingListBlock__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto 0;
+  }
+
+  .form__container label {
+    align-self: flex-start;
+  }
+
+  .form__container input {
+    width: 100%;
+  }
+</style>

@@ -1,0 +1,62 @@
+---
+import { Image } from "astro:assets";
+import logo from "../../assets/icons/logo.svg";
+import SocialIcons from "../Icons/SocialIcons.astro";
+import ContactBlock from "./ContactBlock.astro";
+import HoursBlock from "./HoursBlock.astro";
+import MailingListBlock from "./MailingListBlock.astro";
+---
+
+<footer class="border-gray">
+  <div class="footer__container-top">
+    <p class="text-underline">Instagram feed</p>
+    <Image src={logo} alt="Restaurantea logo" loading="eager" />
+    <SocialIcons />
+  </div>
+  <div class="footer__container-middle">
+    <ContactBlock />
+    <MailingListBlock />
+    <HoursBlock />
+  </div>
+  <div class="footer__container-bottom">
+    <p>
+      This website is a customized version - for training purpose only - of:
+    </p>
+    <p>
+      © Copyright - Restaurantate | Designed by <a
+        href="https://www.victorflow.com/"
+        ><span class="active">VictorFlow</span></a
+      > Templates - Powered by <span class="active">Webflow</span>
+    </p>
+  </div>
+</footer>
+
+<style>
+  .footer__container-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem;
+  }
+
+  .footer__container-top p {
+    width: 17%;
+  }
+
+  .footer__container-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .footer__container-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+</style>

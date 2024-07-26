@@ -1,0 +1,147 @@
+---
+import { Image } from "astro:assets";
+import offer from "../assets/icons/offer.svg";
+import hero from "../assets/images/hero.png";
+import history from "../assets/images/history.png";
+import reservationBckg from "../assets/images/restaurant-reservation.png";
+import suspendedLights from "../assets/images/suspended-lights.png";
+import ButtonLink from "../components/Buttons/ButtonLink.astro";
+import DetailList from "../components/Home/DetailList.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Restaurantea">
+  <main>
+    <section class="container__color__bg__hero">
+      <div class="column col__h__start left__35">
+        <h1>Welcome&nbsp;to Restaurantea</h1>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores,
+          laudantium.
+        </p>
+        <ButtonLink link="/menu" text="View Full Menu" />
+      </div>
+    </section>
+    <section class="column bg__white container__detailList">
+      <Image class="heroImg" src={hero} alt="" />
+      <article
+        class="container__color__bg bg__light container__detailList__article"
+      >
+        <div class="container-sub__color__bg bg__light">
+          <DetailList />
+          <div class="container container__history">
+            <div class="left__60">
+              <Image src={history} alt="" />
+            </div>
+            <div class="right__40 border__left__gray">
+              <div class="column col__h__start">
+                <h5>The Story</h5>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae
+                  nihil totam quisquam placeat, nesciunt consectetur mollitia
+                  debitis vel? Asperiores, delectus.
+                </p>
+              </div>
+              <div class="container row__v__top content__history">
+                <div class="column">
+                  <h5>1996</h5>
+                  <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+                <div class="column">
+                  <h5>2021</h5>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Cumque!
+                  </p>
+                </div>
+              </div>
+              <!-- <JosefineSign /> -->
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="container__color__bg bg__white col__h__start container__todayMenu"
+      >
+        <h6 class="border__tb__gold text__uppercase">Today&apos;s Menu</h6>
+        <div class="container row__v__top container__dishes">
+          <div class="column col__h__start left__25">
+            <h4>Chef&apos;s Special of the Day</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+              nostrum eos dicta illum blanditiis magnam saepe nisi explicabo!
+              Fugit, sequi quos! Cumque dolorem neque explicabo.
+            </p>
+            <Image src={offer} alt="" />
+            <!-- <WhiteButton link="/menu" text="View Full Menu" /> -->
+          </div>
+          <div class="right__65">
+            <div class="column col__h__start">
+              <h4>Daily specials - Starters</h4>
+              <!-- <StarterList /> -->
+            </div>
+            <div class="column col__h__start">
+              <h4>Daily specials - Main course</h4>
+              <!-- <MainDishList /> -->
+            </div>
+            <div class="column col__h__start">
+              <h4>Daily specials - Desserts</h4>
+              <!-- <DessertList /> -->
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section class="container__color__bg col__h__start">
+      <h6 class="border__tb__gold text__uppercase">Testimonials</h6>
+      <h4>What our Clients say</h4>
+      <p>
+        We love to hear from our customers, so please leave a comment or say
+        hello at <span class="active">restaurantea-testimonial@gmail.com</span>
+      </p>
+      <!-- <TestimonialList /> -->
+    </section>
+    <section class="column bg__white">
+      <Image src={suspendedLights} alt="" />
+      <div class="container__color__bg">
+        <h6 class="border__tb__gold text__uppercase">Offers</h6>
+        <h4>Our Special Deals</h4>
+        <p class="text__horizontal__center left">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum,
+          ipsam.
+        </p>
+        <!-- <OfferList /> -->
+      </div>
+      <div class="container__color__bg container__home__menu">
+        <h6 class="border__tb__gold text__uppercase">Menu</h6>
+        <h4>Popular Selection</h4>
+        <p class="text__horizontal__center left">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse,
+          fugiat!
+        </p>
+        <!-- <PopularList /> -->
+      </div>
+    </section>
+    <section class="container__color__bg col__h__start">
+      <h6 class="border__tb__gold text__uppercase">Our services</h6>
+      <div class="content__services">
+        <h4>For your convenience</h4>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur
+          in consectetur, voluptatibus ut quaerat ipsum.
+        </p>
+      </div>
+      <!-- <ServiceList /> -->
+    </section>
+    <section class="container__form">
+      <Image
+        src={reservationBckg}
+        alt=""
+        width={1920}
+        height={1080}
+        loading="eager"
+      />
+      <!-- <ReservationForm /> -->
+    </section>
+  </main>
+</Layout>

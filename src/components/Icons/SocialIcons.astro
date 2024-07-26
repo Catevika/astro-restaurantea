@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets";
+import facebook from "../../assets/icons/facebook.svg";
+import instagram from "../../assets/icons/instagram.svg";
+import pinterest from "../../assets/icons/pinterest.svg";
+import xTwitter from "../../assets/icons/x.svg";
+---
+
+<div class="socialIcons__container">
+  <Image class="icon" src={instagram} alt="Instagram icon" loading="eager" />
+  <Image class="icon" src={facebook} alt="Facebook icon" loading="eager" />
+  <Image class="icon" src={xTwitter} alt="X icon" loading="eager" />
+  <Image class="icon" src={pinterest} alt="Pinterest icon" loading="eager" />
+</div>
+
+<style>
+  .socialIcons__container {
+    margin-top: 0.5rem;
+  }
+
+  @media (max-width: 1065px) {
+    .socialIcons__container,
+    .socialIcons__container img {
+      display: none;
+    }
+  }
+</style>
